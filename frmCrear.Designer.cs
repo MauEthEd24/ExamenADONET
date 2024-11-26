@@ -35,6 +35,7 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            btnSalir = new Button();
             SuspendLayout();
             // 
             // btnGrabar
@@ -95,11 +96,22 @@
             label3.TabIndex = 3;
             label3.Text = "Precio:";
             // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(199, 331);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 23);
+            btnSalir.TabIndex = 12;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
             // frmCrear
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(549, 366);
+            Controls.Add(btnSalir);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -108,6 +120,7 @@
             Controls.Add(txtNombre);
             Controls.Add(btnGrabar);
             Name = "frmCrear";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CREAR PRODUCTOS";
             ResumeLayout(false);
             PerformLayout();
@@ -122,5 +135,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private Button btnSalir;
     }
 }

@@ -33,6 +33,7 @@
             label1 = new Label();
             txtNombreProducto = new TextBox();
             label2 = new Label();
+            btnSalir = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
             // 
@@ -79,17 +80,29 @@
             label2.TabIndex = 4;
             label2.Text = "Ejemplo: Leche";
             // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(245, 287);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 23);
+            btnSalir.TabIndex = 12;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
             // frmBuscar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(614, 346);
+            Controls.Add(btnSalir);
             Controls.Add(label2);
             Controls.Add(txtNombreProducto);
             Controls.Add(label1);
             Controls.Add(dgvProductos);
             Controls.Add(btnBuscarProducto);
             Name = "frmBuscar";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BUSCAR PRODUCTOS";
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             ResumeLayout(false);
@@ -103,5 +116,6 @@
         private Label label1;
         private TextBox txtNombreProducto;
         private Label label2;
+        private Button btnSalir;
     }
 }

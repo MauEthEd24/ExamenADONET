@@ -43,7 +43,7 @@ namespace ExamenADONET
                     sqlParameterStock = new SqlParameter("@Stock", SqlDbType.Int);
                     sqlParameterStock.Value = Convert.ToInt32(txtStock.Text);
 
-                   
+
                     command.Parameters.Add(sqlParameterNombre);
                     command.Parameters.Add(sqlParameterPrecio);
                     command.Parameters.Add(sqlParameterStock);
@@ -67,6 +67,11 @@ namespace ExamenADONET
             txtPrecio.Clear();
             txtStock.Clear();
             txtNombre.Focus();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

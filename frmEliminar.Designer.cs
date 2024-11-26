@@ -32,6 +32,7 @@
             label1 = new Label();
             label2 = new Label();
             btnEliminar = new Button();
+            btnSalir = new Button();
             SuspendLayout();
             // 
             // txtIdProducto
@@ -69,16 +70,28 @@
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
             // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(190, 230);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 23);
+            btnSalir.TabIndex = 12;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
             // frmEliminar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(501, 265);
+            Controls.Add(btnSalir);
             Controls.Add(btnEliminar);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtIdProducto);
             Name = "frmEliminar";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ELIMINAR PRODUCTO";
             ResumeLayout(false);
             PerformLayout();
@@ -90,5 +103,6 @@
         private Label label1;
         private Label label2;
         private Button btnEliminar;
+        private Button btnSalir;
     }
 }

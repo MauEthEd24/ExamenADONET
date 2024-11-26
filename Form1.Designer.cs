@@ -40,12 +40,13 @@
             // 
             // btnBuscar
             // 
+            btnBuscar.BackColor = SystemColors.Info;
             btnBuscar.Location = new Point(112, 103);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(119, 56);
             btnBuscar.TabIndex = 0;
             btnBuscar.Text = "BUSCAR";
-            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.UseVisualStyleBackColor = false;
             btnBuscar.Click += btnBuscar_Click;
             // 
             // groupBox1
@@ -74,53 +75,59 @@
             // 
             // btnCrear
             // 
+            btnCrear.BackColor = SystemColors.Info;
             btnCrear.Location = new Point(247, 103);
             btnCrear.Name = "btnCrear";
             btnCrear.Size = new Size(119, 56);
             btnCrear.TabIndex = 3;
             btnCrear.Text = "CREAR";
-            btnCrear.UseVisualStyleBackColor = true;
+            btnCrear.UseVisualStyleBackColor = false;
             btnCrear.Click += btnCrear_Click;
             // 
             // btnEliminar
             // 
+            btnEliminar.BackColor = SystemColors.Info;
             btnEliminar.Location = new Point(247, 191);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(119, 56);
             btnEliminar.TabIndex = 2;
             btnEliminar.Text = "ELIMINAR";
-            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.UseVisualStyleBackColor = false;
             btnEliminar.Click += btnEliminar_Click;
             // 
             // btnActualizar
             // 
+            btnActualizar.BackColor = SystemColors.Info;
             btnActualizar.Location = new Point(112, 191);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(119, 56);
             btnActualizar.TabIndex = 1;
             btnActualizar.Text = "ACTUALIZAR";
-            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.UseVisualStyleBackColor = false;
             btnActualizar.Click += btnActualizar_Click;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(245, 378);
+            btnSalir.BackColor = SystemColors.HotTrack;
+            btnSalir.Location = new Point(245, 377);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(75, 23);
             btnSalir.TabIndex = 2;
             btnSalir.Text = "SALIR";
-            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += btnSalir_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(583, 450);
             Controls.Add(btnSalir);
             Controls.Add(groupBox1);
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "MENU PRODUCTOS";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

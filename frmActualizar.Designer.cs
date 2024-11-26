@@ -29,17 +29,18 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            button2 = new Button();
+            btnGrabar = new Button();
             groupBox1 = new GroupBox();
             label3 = new Label();
             label2 = new Label();
-            label1 = new Label();
-            txtStock = new TextBox();
-            txtPrecio = new TextBox();
             txtNombre = new TextBox();
+            label1 = new Label();
+            txtPrecio = new TextBox();
+            txtStock = new TextBox();
             label4 = new Label();
             txtIdProducto = new TextBox();
             label5 = new Label();
+            btnSalir = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,20 +52,22 @@
             button1.TabIndex = 0;
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // button2
+            // btnGrabar
             // 
-            button2.Location = new Point(143, 174);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Grabar";
-            button2.UseVisualStyleBackColor = true;
+            btnGrabar.Location = new Point(143, 174);
+            btnGrabar.Name = "btnGrabar";
+            btnGrabar.Size = new Size(75, 23);
+            btnGrabar.TabIndex = 1;
+            btnGrabar.Text = "Grabar";
+            btnGrabar.UseVisualStyleBackColor = true;
+            btnGrabar.Click += btnGrabar_Click;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(btnGrabar);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(txtNombre);
             groupBox1.Controls.Add(label1);
@@ -95,6 +98,13 @@
             label2.TabIndex = 7;
             label2.Text = "Stock:";
             // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(131, 33);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(152, 23);
+            txtNombre.TabIndex = 6;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -104,13 +114,6 @@
             label1.TabIndex = 8;
             label1.Text = "Nombre:";
             // 
-            // txtStock
-            // 
-            txtStock.Location = new Point(131, 91);
-            txtStock.Name = "txtStock";
-            txtStock.Size = new Size(152, 23);
-            txtStock.TabIndex = 4;
-            // 
             // txtPrecio
             // 
             txtPrecio.Location = new Point(131, 62);
@@ -118,12 +121,12 @@
             txtPrecio.Size = new Size(152, 23);
             txtPrecio.TabIndex = 5;
             // 
-            // txtNombre
+            // txtStock
             // 
-            txtNombre.Location = new Point(131, 33);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(152, 23);
-            txtNombre.TabIndex = 6;
+            txtStock.Location = new Point(131, 91);
+            txtStock.Name = "txtStock";
+            txtStock.Size = new Size(152, 23);
+            txtStock.TabIndex = 4;
             // 
             // label4
             // 
@@ -150,17 +153,29 @@
             label5.TabIndex = 9;
             label5.Text = "INGRESE EL ID DEL PRODUCTO A MODIFICAR";
             // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(194, 385);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 23);
+            btnSalir.TabIndex = 11;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
             // frmActualizar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(505, 431);
+            Controls.Add(btnSalir);
             Controls.Add(txtIdProducto);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(groupBox1);
             Controls.Add(button1);
             Name = "frmActualizar";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ACTUALIZAR PRODUCTO";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -171,7 +186,7 @@
         #endregion
 
         private Button button1;
-        private Button button2;
+        private Button btnGrabar;
         private GroupBox groupBox1;
         private Label label3;
         private Label label2;
@@ -182,5 +197,6 @@
         private Label label4;
         private TextBox txtIdProducto;
         private Label label5;
+        private Button btnSalir;
     }
 }

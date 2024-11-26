@@ -21,7 +21,7 @@ namespace ExamenADONET
             InitializeComponent();
         }
 
-        
+
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             SqlCommand command = null;
@@ -41,9 +41,10 @@ namespace ExamenADONET
                     sqlParameter = new SqlParameter("@Nombre", SqlDbType.VarChar, 50);
                     sqlParameter.Value = txtNombreProducto.Text;
 
-                                       
+
                     command.Parameters.Add(sqlParameter);
-                    
+
+                    producto = new List<Producto>();
 
                     SqlDataReader reader = command.ExecuteReader();
 
@@ -52,19 +53,19 @@ namespace ExamenADONET
                     {
                         producto.Add(new Producto
                         {
-                            IdProducto = (int)reader["IdProducto"],
-                            Nombre = (string)reader["Nombre"],
-                            Precio = (decimal)reader["Precio"],
-                            Stock = (int)reader["Stock"],
+                            IdProducto = Convert.ToInt16(reader["IdProducto"]),
+                            Nombre = Convert.ToString(reader["Nombre"]),
+                            Precio = Convert.ToDecimal(reader["Precio"]),
+                            Stock = Convert.ToInt16(reader["Stock"]),
                         }
                        );
                     }
+                    dgvProductos.DataSource = producto;
 
-                    
 
                 }
                 //return producto;
-                dgvProductos.DataSource = producto;
+
             }
             catch (Exception)
             {
@@ -78,6 +79,11 @@ namespace ExamenADONET
                 producto = null;
 
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

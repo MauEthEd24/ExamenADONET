@@ -22,7 +22,7 @@ namespace ExamenADONET
         {
             SqlCommand command = null;
             SqlParameter sqlParameterIdproducto = null;
-            
+
 
             try
             {
@@ -35,9 +35,9 @@ namespace ExamenADONET
 
                     sqlParameterIdproducto = new SqlParameter("@IdProducto", SqlDbType.VarChar, 50);
                     sqlParameterIdproducto.Value = Convert.ToInt32(txtIdProducto.Text);
-                                        
+
                     command.Parameters.Add(sqlParameterIdproducto);
-                    
+
                     command.ExecuteNonQuery();
 
                     MessageBox.Show("Producto Eliminado Correctamente");
@@ -49,12 +49,17 @@ namespace ExamenADONET
                 MessageBox.Show("Error, comunicarse con el administrador...");
             }
 
-            
+
         }
         private void Limpiar()
         {
             txtIdProducto.Clear();
             txtIdProducto.Focus();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
